@@ -94,13 +94,15 @@ public class MyLinkedList{
 
     public String toString(){
     Node current = start;
+    int fin = 0;
     String omni = "";
-    while(current != null){
+    while(fin < size ){
       omni = omni + current.getData();
       if(current.getNext() != null){
         omni = omni + ", ";
       }
       current = current.getNext();
+      fin = fin + 1;
     }
     return omni;
   }
