@@ -48,6 +48,11 @@ public class MyLinkedList{
         start = adder;
         start.setNext(oldstart);
       }
+      else if(index == size - 1){
+        Node oldend = end;
+        end = adder;
+        end.setPrev(oldend);
+      }
       else
       for(int i = 0; i < size; i++){
         if(i == index - 1){
