@@ -36,7 +36,7 @@ public class MyLinkedList{
        throw new IndexOutOfBoundsException("Index" +index+
        "cannot be negative nor equal to nor greater than the size");
      }
-      Node current = Start;
+      Node current = start;
       Node adder = new Node(value);
       size = size + 1;
       for(int i = 0; i < size; i++){
@@ -46,8 +46,22 @@ public class MyLinkedList{
           adder.setPrev(save.getPrev());
           i = size;
         }
-        else current = current.next();
+        else current = current.getNext();
       }
       }
+
+    public String get(int index){
+      if(index < 0 || index >= size){
+        throw new IndexOutOfBoundsException("Index" +index+
+        "cannot be negative nor equal to nor greater than the size");
+      }
+      Node current = start;
+      for(int i = 0; i < size; i++){
+        if(i == index){
+          return current.getData();
+        }
+        else current = current.getNext();
+      }
+    }
 
 }
