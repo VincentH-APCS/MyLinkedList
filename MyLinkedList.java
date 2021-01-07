@@ -39,6 +39,11 @@ public class MyLinkedList{
       Node current = start;
       size = size + 1;
       Node adder = new Node(value);
+      if(index == 0){
+        Node oldstart = start;
+        start = adder;
+        start.setPrev(oldstart);
+      }
 
       for(int i = 0; i < size; i++){
         if(i == index - 1){
