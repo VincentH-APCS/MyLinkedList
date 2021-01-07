@@ -37,13 +37,13 @@ public class MyLinkedList{
        "cannot be negative nor equal to nor greater than the size");
      }
       Node current = start;
-      Node adder = new Node(value);
       size = size + 1;
+      Node adder = new Node(value);
+
       for(int i = 0; i < size; i++){
-        if(i == index){
-          Node save = current;
-          adder.setNext(current);
-          adder.setPrev(save.getPrev());
+        if(i == index - 1){
+          adder.setNext(current.getNext());
+          adder.setPrev(current);
           i = size;
         }
         else current = current.getNext();
@@ -62,6 +62,7 @@ public class MyLinkedList{
         }
         else current = current.getNext();
       }
+      return "This shouldn't be read";
     }
 
 }
