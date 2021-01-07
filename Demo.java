@@ -25,3 +25,4 @@ public class Demo{
     System.out.println(Snake.size());
     System.out.println(Snake.toString());
 }
+}
