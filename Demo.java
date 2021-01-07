@@ -25,5 +25,7 @@ public class Demo{
     Snake.add(14, "niece's birthday next week.");
     System.out.println(Snake.size());
     System.out.println(Snake.toString());
+    System.out.println();
+    System.out.println(Snake.reverseString());
 }
 }
