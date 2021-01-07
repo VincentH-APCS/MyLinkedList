@@ -6,38 +6,22 @@ public class Demo{
 
     MyLinkedList Snake = new MyLinkedList();
 
+    Snake.add(0, "Once upon a time");
+    Snake.add(1, "There lived an");
+    Snake.add(2, "Ancient Wizard who");
+    Snake.add(3, "Ate a cheeseburger");
     System.out.println(Snake.size());
-    System.out.print(Snake.add("alpha  "));
-    System.out.print(Snake.add("beta  "));
-    System.out.print(Snake.size());
-    System.out.println(Snake.add("Omega!  "));
-    System.out.print(Snake.get(0) + "  ");
-    System.out.print(Snake.get(1) + "  ");
-    System.out.print(Snake.get(2) + "   ");
-    //System.out.println(Snake.get(3));
-    Snake.add(2, "Whoa There Buddy!  ");
-    System.out.println();
-    System.out.print(Snake.size());
-    System.out.print(Snake.get(0));
-    System.out.print(Snake.get(1));
-    System.out.print(Snake.get(2));
-    System.out.print(Snake.get(3));
-  System.out.println();
-    Snake.add(0, "I want to lead   ");
-    System.out.print(Snake.get(0));
-    System.out.print(Snake.get(1));
-    System.out.println(Snake.get(2));
-    System.out.print(Snake.set(0, "Breaking News!  "));
-    System.out.print(Snake.set(1, "The List has changed  "));
-    System.out.print(Snake.set(2, "HAhahahahaha  "));
-    System.out.print(Snake.set(3, "Yeah....  "));
-    System.out.println(Snake.set(4, "pls work!"));
-    System.out.print(Snake.get(0));
-    System.out.print(Snake.get(1));
-    System.out.print(Snake.get(2));
-    System.out.print(Snake.get(3));
-    System.out.println(Snake.get(4));
-    System.out.print(Snake.set(5, "This should crash!"));
-  }
-
+    Snake.add(4, "He then went to");
+    Snake.add(4, "at McWizardry Bell");
+    Snake.add(0, "This story is an old one.");
+    Snake.add(8, "the Wands R Us");
+    Snake.add(9, "That was next door");
+    System.out.println(Snake.size());
+    Snake.add(10, "So he could");
+    Snake.add(11, "purchase 2 new wands");
+    Snake.add(12, "one for himself");
+    Snake.add(13, "and one for his");
+    Snake.add(14, "niece's birthday next week.");
+    System.out.println(Snake.size());
+    System.out.println(Snake.toString());
 }
