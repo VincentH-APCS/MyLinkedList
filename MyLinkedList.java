@@ -98,6 +98,7 @@ public class MyLinkedList{
       }
       current = current.getNext();
     }
+    return omni;
   }
 
 }
