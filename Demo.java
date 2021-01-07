@@ -4,19 +4,12 @@ public class Demo{
     Node beta = new Node("second");
     Node wild = new Node("IDk lol");
 
-  //  System.out.println(alpha.getData());
-  //  System.out.println(beta.getData());
-  //  System.out.println(wild.getData());
-  //  System.out.println(wild.setData("change!"));
-  //  System.out.println(wild.getData());
-    System.out.println(alpha.setNext(beta));
-    System.out.println(alpha.setPrev(wild));
-    System.out.println(wild.getPrev());
-    System.out.println(wild.getNext());
-    System.out.println(alpha.getPrev());
-    System.out.println(alpha.getNext());
-    System.out.println(beta.getPrev());
-    System.out.println(beta.getNext());
+    MyLinkedList Snake = new MyLinkedList();
+
+    System.out.println(Snake.add("alpha"));
+    System.out.println(Snake.add("beta"));
+    System.out.println(Snake.add("wild"));
+    System.out.println(Snake.size());
   }
 
 }
