@@ -15,7 +15,7 @@ public class Node{
     data = value;
     return old;
   }
-  public String getNext(){
+  public Node getNext(){
     return next;
   }
   public String setNext(String value){
@@ -23,7 +23,7 @@ public class Node{
     next = value;
     return old;
   }
-  public String getPrev(){
+  public Node getPrev(){
     return prev;
   }
   public String setPrev(String value){
@@ -31,5 +31,5 @@ public class Node{
     prev = value;
     return old;
   }
-  
+
 }
