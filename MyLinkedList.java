@@ -107,4 +107,19 @@ public class MyLinkedList{
     return omni;
   }
 
+  public String reverseString(){
+    node current = end;
+    int fin = 0;
+    String delta = "";
+    while(fin < size){
+      delta = delta + current.getData();
+      if(current.getPrev() != null){
+        delta = delta + ", ";
+      }
+      current = current.getPrev();
+      fin = fin + 1;
+    }
+    return delta;
+  }
+
 }
