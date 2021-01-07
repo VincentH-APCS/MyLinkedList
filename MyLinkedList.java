@@ -44,7 +44,7 @@ public class MyLinkedList{
         start = adder;
         start.setPrev(oldstart);
       }
-
+      else
       for(int i = 0; i < size; i++){
         if(i == index - 1){
           adder.setNext(current.getNext());
