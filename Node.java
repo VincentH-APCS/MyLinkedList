@@ -20,8 +20,9 @@ public class Node{
   }
   public Node setNext(Node nexter){
     Node old = next;
-    next = nexter;
-    nexter.setPrev(this);
+    this.next = nexter;
+    if(nexter.getPrev() != this){
+    nexter.setPrev(this);}
     return old;
   }
   public Node getPrev(){
@@ -29,8 +30,9 @@ public class Node{
   }
   public Node setPrev(Node laster){
     Node old = prev;
-    prev = laster;
-    laster.setNext(this);
+    this.prev = laster;
+    if(laster.getNext() != this){
+    laster.setNext(this);}
     return old;
   }
 
