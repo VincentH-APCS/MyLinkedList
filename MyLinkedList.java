@@ -108,7 +108,7 @@ public class MyLinkedList{
   }
 
   public String reverseString(){
-    node current = end;
+    Node current = end;
     int fin = 0;
     String delta = "";
     while(fin < size){
