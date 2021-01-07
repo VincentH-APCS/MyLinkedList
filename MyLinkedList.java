@@ -36,9 +36,13 @@ public class MyLinkedList{
        throw new IndexOutOfBoundsException("Index" +index+
        "cannot be negative  nor greater than the size");
      }
-      Node current = start;
       size = size + 1;
       Node adder = new Node(value);
+      if (size == 1){
+        start = adder;
+        end = adder;
+      }
+      Node current = start;
       if(index == 0){
         Node oldstart = start;
         start = adder;
