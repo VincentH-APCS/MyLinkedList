@@ -32,9 +32,9 @@ public class MyLinkedList{
    }
 
    public void add(int index, String value){
-     if(index < 0 || index >= size){
+     if(index < 0 || index > size){
        throw new IndexOutOfBoundsException("Index" +index+
-       "cannot be negative nor equal to nor greater than the size");
+       "cannot be negative  nor greater than the size");
      }
       Node current = start;
       size = size + 1;
@@ -87,5 +87,17 @@ public class MyLinkedList{
       }
       return garb;
     }
-    
+
+    public String toString(){
+    Node current = start;
+    String omni = "";
+    while(current != null){
+      omni = omni + current.getData();
+      if(current.getNext() != null){
+        omni = omni + ", ";
+      }
+      current = current.getNext();
+    }
+  }
+
 }
