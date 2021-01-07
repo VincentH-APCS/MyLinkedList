@@ -42,7 +42,7 @@ public class MyLinkedList{
       if(index == 0){
         Node oldstart = start;
         start = adder;
-        start.setPrev(oldstart);
+        start.setNext(oldstart);
       }
       else
       for(int i = 0; i < size; i++){
