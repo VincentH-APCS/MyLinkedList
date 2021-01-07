@@ -18,17 +18,17 @@ public class Node{
   public Node getNext(){
     return next;
   }
-  public String setNext(String value){
-    String old = data;
-    next = value;
+  public Node setNext(Node nexter){
+    Node old = next;
+    next = nexter;
     return old;
   }
   public Node getPrev(){
     return prev;
   }
-  public String setPrev(String value){
-    String old = prev;
-    prev = value;
+  public Node setPrev(Node laster){
+    Node old = prev;
+    prev = laster;
     return old;
   }
 
