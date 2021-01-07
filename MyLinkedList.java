@@ -70,4 +70,21 @@ public class MyLinkedList{
       return "This shouldn't be read";
     }
 
+    public String set(int index, String value){
+      if(index < 0 || index >= size){
+        throw new IndexOutOfBoundsException("Index" +index+
+        "cannot be negative nor equal to nor greater than the size");
+      }
+      Node current = start;
+      String garb = "";
+      for(int i = 0; i < size; i++){
+        if(i == index){
+          garb = current.getData();
+          current.setData(value);
+          i = size;
+        }
+        else current = current.getNext();
+      }
+      return garb;
+    }
 }
