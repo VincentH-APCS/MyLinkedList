@@ -6,10 +6,22 @@ public class Demo{
 
     MyLinkedList Snake = new MyLinkedList();
 
+    System.out.println(Snake.size());
     System.out.println(Snake.add("alpha"));
     System.out.println(Snake.add("beta"));
-    System.out.println(Snake.add("wild"));
     System.out.println(Snake.size());
+    System.out.println(Snake.add("Omega!"));
+    System.out.print(Snake.get(0) + "  ");
+    System.out.print(Snake.get(1) + "  ");
+    System.out.print(Snake.get(2) + "   ");
+    //System.out.println(Snake.get(3));
+    Snake.add(2, "Whoa There Buddy!");
+    System.out.println(Snake.size());
+    System.out.print(Snake.get(0) + "  ");
+    System.out.print(Snake.get(1) + "  ");
+    System.out.print(Snake.get(2) + "  ");
+    System.out.println(Snake.get(3) + "  ");
+    System.out.println(Snake.get(-3));
   }
 
 }
