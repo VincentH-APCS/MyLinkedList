@@ -21,7 +21,11 @@ public class Demo{
     System.out.print(Snake.get(1) + "  ");
     System.out.print(Snake.get(2) + "  ");
     System.out.println(Snake.get(3) + "  ");
-    System.out.println(Snake.get(-3));
+  //  System.out.println(Snake.get(-3));
+    Snake.add(0, "I want to lead   ");
+    System.out.println(Snake.get(0));
+    System.out.println(Snake.get(1));
+    System.out.println(Snake.get(2));
   }
 
 }
