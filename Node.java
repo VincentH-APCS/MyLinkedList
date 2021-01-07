@@ -21,6 +21,7 @@ public class Node{
   public Node setNext(Node nexter){
     Node old = next;
     next = nexter;
+    nexter.setPrev(this);
     return old;
   }
   public Node getPrev(){
@@ -29,6 +30,7 @@ public class Node{
   public Node setPrev(Node laster){
     Node old = prev;
     prev = laster;
+    laster.setNext(this);
     return old;
   }
 
