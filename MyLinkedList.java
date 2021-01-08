@@ -128,16 +128,39 @@ public class MyLinkedList{
   }
 
   public String remove(int index){
+    if(index < 0 || index >= size){
+      throw new IndexOutOfBoundsException("Index" +index+
+      "cannot be negative nor equal to nor greater than the size");
+    }
     Node last = new Node();
     Node after = new Node();
     Node current = start;
     int place = 0;
+    if(size == 1){
+      String output = start.getData();
+      start = null;
+      end = null;
+      return output;
+    }
+    if(index == size - 1){
+      String output = end.getData();
+      end = end.getPrev();
+      end.setNext(null);
+      return output;
+    }
+    if(index == 0){
+      String output = start.getData();
+      start = start.getNext();
+      start.setPrev(null);
+      return output;
+    }
     while(place < size){
       if(place == index){
+        String output = current.getData();
         last.setNext(after)
-        current.setPrev(Null);
-        current.setNext(Null);
-        return current.getData();
+        current.setPrev(null);
+        current.setNext(null);
+        return output;
       }
     }
   }
