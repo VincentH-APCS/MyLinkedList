@@ -101,7 +101,7 @@ public class MyLinkedList{
     Node current = start;
     int fin = 0;
     String omni = "[";
-    while(fin < size ){
+    while(fin < size){
       omni = omni + current.getData();
       if(current.getNext() != null){
         omni = omni + ", ";
@@ -133,6 +133,7 @@ public class MyLinkedList{
       "cannot be negative nor equal to nor greater than the size");
     }
     Node current = start;
+    Node term = end;
     int place = 0;
     if(size == 1){
       String output = start.getData();
@@ -145,7 +146,7 @@ public class MyLinkedList{
       String output = end.getData();
       end = end.getPrev();
       current = end.getNext();
-      current = null;
+      current.setData(null);
       //end.setNext(null);
       size = size - 1;
       return output;
@@ -154,7 +155,7 @@ public class MyLinkedList{
       String output = start.getData();
       start = start.getNext();
       current = start.getPrev();
-      current = null;
+      current.setData(null);
       //start.setPrev(null);
       size = size - 1;
       return output;
