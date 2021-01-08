@@ -168,6 +168,7 @@ public class MyLinkedList{
       }
       current = current.getNext();
     }
+    return "IF you see this, something wrong happened";
   }
 
 }
