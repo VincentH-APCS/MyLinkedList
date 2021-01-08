@@ -100,7 +100,7 @@ public class MyLinkedList{
     public String toString(){
     Node current = start;
     int fin = 0;
-    String omni = "";
+    String omni = "[";
     while(fin < size ){
       omni = omni + current.getData();
       if(current.getNext() != null){
@@ -109,13 +109,13 @@ public class MyLinkedList{
       current = current.getNext();
       fin = fin + 1;
     }
-    return omni;
+    return omni + "]";
   }
 
   public String toStringReversed(){
     Node current = end;
     int fin = 0;
-    String delta = "";
+    String delta = "[";
     while(fin < size){
       delta = delta + current.getData();
       if(current.getPrev() != null){
@@ -124,7 +124,7 @@ public class MyLinkedList{
       current = current.getPrev();
       fin = fin + 1;
     }
-    return delta;
+    return delta + "]";
   }
 
 }
