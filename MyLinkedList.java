@@ -36,22 +36,22 @@ public class MyLinkedList{
        throw new IndexOutOfBoundsException("Index" +index+
        "cannot be negative  nor greater than the size");
      }
+     Node adder = new Node(value);
+       Node current = start;
+       Node term = end;
       size = size + 1;
-      Node adder = new Node(value);
       if (size == 1){
         start = adder;
         end = adder;
       }
-      Node current = start;
-      if(index == 0){
-        Node oldstart = start;
+
+      else if(index == 0){
         start = adder;
-        start.setNext(oldstart);
+        start.setNext(current);
       }
       else if(index == size - 1){
-        Node oldend = end;
-        end = adder;
-        end.setPrev(oldend);
+      end = adder;
+      adder.setPrev(term);
       }
       else
       for(int i = 0; i < size; i++){
@@ -144,14 +144,18 @@ public class MyLinkedList{
     if(index == size - 1){
       String output = end.getData();
       end = end.getPrev();
-      end.setNext(null);
+      current = end.getNext();
+      current = null;
+      //end.setNext(null);
       size = size - 1;
       return output;
     }
     if(index == 0){
       String output = start.getData();
       start = start.getNext();
-      start.setPrev(null);
+      current = start.getPrev();
+      current = null;
+      //start.setPrev(null);
       size = size - 1;
       return output;
     }
@@ -159,8 +163,8 @@ public class MyLinkedList{
       if(place == index){
         String output = current.getData();
         current.getPrev().setNext(current.getNext());
-        current.setPrev(null);
-        current.setNext(null);
+        //current.setPrev(null);
+        //current.setNext(null);
         size = size - 1;
         return output;
       }
