@@ -112,7 +112,7 @@ public class MyLinkedList{
     return omni;
   }
 
-  public String reverseString(){
+  public String toStringReversed(){
     Node current = end;
     int fin = 0;
     String delta = "";
