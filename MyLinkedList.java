@@ -132,8 +132,6 @@ public class MyLinkedList{
       throw new IndexOutOfBoundsException("Index" +index+
       "cannot be negative nor equal to nor greater than the size");
     }
-  //  Node last = new Node();
-    //Node after = new Node();
     Node current = start;
     int place = 0;
     if(size == 1){
@@ -167,6 +165,7 @@ public class MyLinkedList{
         return output;
       }
       current = current.getNext();
+      place = place + 1;
     }
     return "IF you see this, something wrong happened";
   }
