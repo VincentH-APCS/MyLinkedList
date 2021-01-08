@@ -127,4 +127,19 @@ public class MyLinkedList{
     return delta + "]";
   }
 
+  public String remove(int index){
+    Node last = new Node();
+    Node after = new Node();
+    Node current = start;
+    int place = 0;
+    while(place < size){
+      if(place == index){
+        last.setNext(after)
+        current.setPrev(Null);
+        current.setNext(Null);
+        return current.getData();
+      }
+    }
+  }
+
 }
