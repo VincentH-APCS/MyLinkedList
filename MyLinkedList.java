@@ -160,7 +160,7 @@ public class MyLinkedList{
     while(place < size){
       if(place == index){
         String output = current.getData();
-        current.getPrev().setNext(Current.getNext());
+        current.getPrev().setNext(current.getNext());
         current.setPrev(null);
         current.setNext(null);
         size = size - 1;
