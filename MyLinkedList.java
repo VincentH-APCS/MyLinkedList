@@ -132,36 +132,41 @@ public class MyLinkedList{
       throw new IndexOutOfBoundsException("Index" +index+
       "cannot be negative nor equal to nor greater than the size");
     }
-    Node last = new Node();
-    Node after = new Node();
+  //  Node last = new Node();
+    //Node after = new Node();
     Node current = start;
     int place = 0;
     if(size == 1){
       String output = start.getData();
       start = null;
       end = null;
+      size = size - 1;
       return output;
     }
     if(index == size - 1){
       String output = end.getData();
       end = end.getPrev();
       end.setNext(null);
+      size = size - 1;
       return output;
     }
     if(index == 0){
       String output = start.getData();
       start = start.getNext();
       start.setPrev(null);
+      size = size - 1;
       return output;
     }
     while(place < size){
       if(place == index){
         String output = current.getData();
-        last.setNext(after)
+        current.getPrev().setNext(Current.getNext());
         current.setPrev(null);
         current.setNext(null);
+        size = size - 1;
         return output;
       }
+      current = current.getNext();
     }
   }
 
