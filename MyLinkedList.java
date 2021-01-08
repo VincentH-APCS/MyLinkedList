@@ -142,6 +142,22 @@ public class MyLinkedList{
       size = size - 1;
       return output;
     }
+    if(size == 2 && index == 1){
+      String output = end.getData();
+      Node replace = new Node(start.getData());
+      start = replace;
+      end = replace;
+      size = size - 1;
+      return output;
+    }
+    if(size == 2 && index == 0){
+      String output = start.getData();
+      Node replace = new Node(end.getData());
+      start = replace;
+      end = replace;
+      size = size - 1;
+      return output;
+    }
     if(index == size - 1){
       String output = end.getData();
       term = end.getPrev();
