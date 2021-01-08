@@ -144,19 +144,19 @@ public class MyLinkedList{
     }
     if(index == size - 1){
       String output = end.getData();
-      end = end.getPrev();
-      current = end.getNext();
-      current.setData(null);
-      //end.setNext(null);
+      term = end.getPrev();
+      Node replace = new Node(term.getData());
+      replace.setPrev(term.getPrev());
+      end = term;
       size = size - 1;
       return output;
     }
     if(index == 0){
       String output = start.getData();
-      start = start.getNext();
-      current = start.getPrev();
-      current.setData(null);
-      //start.setPrev(null);
+      current = start.getNext();
+      Node replace = new Node(current.getData());
+      replace.setNext(current.getNext());
+      start = current;
       size = size - 1;
       return output;
     }
