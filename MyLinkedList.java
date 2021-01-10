@@ -180,8 +180,6 @@ public class MyLinkedList{
       if(place == index){
         String output = current.getData();
         current.getPrev().setNext(current.getNext());
-        //current.setPrev(null);
-        //current.setNext(null);
         size = size - 1;
         return output;
       }
@@ -189,6 +187,13 @@ public class MyLinkedList{
       place = place + 1;
     }
     return "IF you see this, something wrong happened";
+  }
+  public void extend(MyLinkedList other){
+    Node thisend = end;
+    this.end.setNext(other.start);
+    this.size() = this.size() + other.getSize();
+    other.start = null;
+    other.end = null;
   }
 
 }
