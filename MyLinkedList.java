@@ -210,15 +210,15 @@ public class MyLinkedList{
       other.remove(0);
     }
     else if(other.size != 0){
-    this.end.setNext(other.start);
+    end.setNext(other.start);
+    end = other.end;
     this.size = this.size + other.size;
-    this.end.setData(other.end.getData());
-    this.end.setPrev(other.end.getPrev());
     other.size = 0;
     other.start = null;
-    other.end = null;}
+    other.end = null;
   }
-  public boolean StartTest(){
+}
+/*  public boolean StartTest(){
     if(start != null){
       return true;
     } else return false;
@@ -227,7 +227,7 @@ public class MyLinkedList{
     if(end != null){
       return true;
     } else return false;
-  }
+  }*/
   //both are for debugging purposes only
 
 }
