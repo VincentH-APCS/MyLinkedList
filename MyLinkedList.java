@@ -189,6 +189,9 @@ public class MyLinkedList{
     return "IF you see this, something wrong happened";
   }
   public void extend(MyLinkedList other){
+    if(other.size == 0){
+    }
+    else
     this.end.setNext(other.start);
     this.size = this.size + other.size;
     this.end = other.end;
