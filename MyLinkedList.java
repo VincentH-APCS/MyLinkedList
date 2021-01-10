@@ -190,23 +190,24 @@ public class MyLinkedList{
   }
 
   public void extend(MyLinkedList other){
-    Node reboot = new Node("");
-    Node leboot = new Node("");
+
     if(this.size == 0){
-      reboot.setData(other.start.getData());
-      if(other.size() != 1){
-      reboot.setNext(other.start.getNext());
+    start = other.start;
+    end = other.end;
+    size = other.size;
+    if(other.size != 0){
+    other.remove(0);
+    other.size = 0;}
     }
-      this.size =  other.size;
-      leboot.setData(other.end.getData());
-      if(other.size() != 1){
-      leboot.setPrev(other.end.getPrev());
+    else if(other.size == 1){
+      this.add(other.get(0));
+      other.remove(0);
     }
-      start = reboot;
-      end = leboot;
-      other.size = 0;
-      other.start = null;
-      other.end = null;
+    else if (other.size == 2){
+      this.add(other.get(0));
+      other.remove(0);
+      this.add(other.get(0));
+      other.remove(0);
     }
     else if(other.size != 0){
     this.end.setNext(other.start);
