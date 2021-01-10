@@ -189,9 +189,10 @@ public class MyLinkedList{
     return "IF you see this, something wrong happened";
   }
   public void extend(MyLinkedList other){
-    Node thisend = end;
     this.end.setNext(other.start);
-    this.size() = this.size() + other.getSize();
+    this.size = this.size + other.size;
+    this.end = other.end;
+    other.size = 0;
     other.start = null;
     other.end = null;
   }
