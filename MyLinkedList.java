@@ -188,16 +188,45 @@ public class MyLinkedList{
     }
     return "IF you see this, something wrong happened";
   }
+
   public void extend(MyLinkedList other){
-    if(other.size == 0){
+    Node reboot = new Node("");
+    Node leboot = new Node("");
+    if(this.size == 0){
+      reboot.setData(other.start.getData());
+      if(other.size() != 1){
+      reboot.setNext(other.start.getNext());
     }
-    else
+      this.size =  other.size;
+      leboot.setData(other.end.getData());
+      if(other.size() != 1){
+      leboot.setPrev(other.end.getPrev());
+    }
+      start = reboot;
+      end = leboot;
+      other.size = 0;
+      other.start = null;
+      other.end = null;
+    }
+    else if(other.size != 0){
     this.end.setNext(other.start);
     this.size = this.size + other.size;
-    this.end = other.end;
+    this.end.setData(other.end.getData());
+    this.end.setPrev(other.end.getPrev());
     other.size = 0;
     other.start = null;
-    other.end = null;
+    other.end = null;}
   }
+  public boolean StartTest(){
+    if(start != null){
+      return true;
+    } else return false;
+  }
+  public boolean EndTest(){
+    if(end != null){
+      return true;
+    } else return false;
+  }
+  //both are for debugging purposes only
 
 }
